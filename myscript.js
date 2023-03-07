@@ -114,8 +114,8 @@ function validateform() {
 
     // Kiểm tra số điện thoại
     var phoneRegex = /^[0-9]{10,12}$/;
-    if (!mobile.match(phoneRegex)){
-        alert("Vui lòng nhập số điện thoại hợp lệ" );
+    if (!mobile.match(phoneRegex)) {
+        alert("Vui lòng nhập số điện thoại hợp lệ");
         return false;
     }
 
@@ -130,8 +130,8 @@ function validateform() {
     var type = document.getElementById("creditType").value;
     var creditNo = document.getElementById("creditNo").value;
     var visaRegex = /^4[0-9]{12}(?:[0-9]{3})?$/;
-    var masterRegex = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14})$/;
-    var amexRegex = /^^3[47][0-9]{13}$$/;
+    var masterRegex = /^(5[1-5][0-9]{14})$/;
+    var amexRegex = /^3[47][0-9]{13}$/;
 
     if (type == "VISA") {
         if (!creditNo.match(visaRegex)) {
@@ -207,7 +207,7 @@ function validateCredit() {
 // Vẽ tam giác cân
 document.getElementById("ve").onclick = function () {
     var n = Number(document.getElementById("diamondSize").value);
-    if ( n > 0 && n < 6 ) {
+    if (n > 0 && n < 6) {
         var s = ""
         var m = 1
         s += "<table border='0'><tbody style='font-size: 25px;font-family: sans-serif;'>"
