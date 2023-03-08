@@ -58,11 +58,6 @@ function validateform() {
         return false
     }
 
-    if (from === to) {
-        alert("Nơi đi và nơi đến không thể giống nhau");
-        return false;
-    }
-
     if (lastName == "") {
         alert("Vui lòng nhập họ của bạn");
         return false;
